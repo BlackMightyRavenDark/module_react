@@ -6,6 +6,10 @@
     border: 2px solid rgba(213, 140, 81, 1);
 }
 
+.card:hover {
+    cursor: pointer;
+}
+
 .card__content-wrapper {
     display: flex;
     flex-direction: column;
