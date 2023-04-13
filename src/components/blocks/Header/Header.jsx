@@ -1,6 +1,6 @@
 import React from "react";
 
-import image from '../../../assets/header_basket.svg';
+import image from '../../../assets/header_cart.svg';
 
 import styles from "./header.module.css";
 
@@ -11,8 +11,8 @@ function Header() {
                 НАША ПРОДУКЦИЯ
             </span>
 
-            <span className={styles["header__basket-wrapper"]}>
-                <div className={styles["basket__text-wrapper"]}>
+            <span className={styles["header__cart-wrapper"]}>
+                <div className={styles["cart__text-wrapper"]}>
                     <p>
                         3 товара
                     </p>
@@ -20,10 +20,9 @@ function Header() {
                     <p>
                         на сумму 3 500 ₽
                     </p>
-
-
                 </div>
-                    <img src={image} alt="" className="img"/>
+
+                <img src={image} alt="" className="img"/>
             </span>
         </header>
     )
