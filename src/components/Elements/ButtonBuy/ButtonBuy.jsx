@@ -17,9 +17,10 @@ function ButtonBuy() {
     return (
         <img
             src={isMouseOver ? imageBuyActive : imageBuy}
-            alt=""
+            alt="buy"
             onMouseOver={onMouseOverHandler}
-            onMouseOut={onMouseOutHandler}/>
+            onMouseOut={onMouseOutHandler}
+        />
     )
 }
 
