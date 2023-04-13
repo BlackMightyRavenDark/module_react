@@ -26,6 +26,10 @@
     width: 270px;
 }
 
+.card:hover > .card__content-wrapper > .card__description-wrapper > p {
+    color: #D58C51;
+}
+
 .card__description-wrapper > p:nth-child(1) {
     font-size: 17px;
     font-weight: 500;
@@ -42,6 +46,10 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 20px 10px 20px;
+}
+
+.card:hover > .card__cost-wrapper > .cost-weight > span {
+    color: #D58C51;
 }
 
 .cost-weight > span:nth-child(2) {

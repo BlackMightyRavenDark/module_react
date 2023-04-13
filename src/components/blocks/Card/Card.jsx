@@ -8,8 +8,9 @@ function Card({image, title, description, cost, weight, pcs}) {
         <div className={styles["card"]}>
             <div className={styles["card__content-wrapper"]}>
                 <div className={styles["img"]}>
-                <img src={image} alt="" className={styles["img"]}/>
+                    <img src={image} alt="" className={styles["img"]}/>
                 </div>
+
                 <div className={styles["card__description-wrapper"]}>
                     <p>
                         {title}
