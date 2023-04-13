@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./card.module.css"
 
-import imageBuy from "../../../assets/buy.svg";
+import ButtonBuy from "../../Elements/ButtonBuy/ButtonBuy.jsx";
 
 function Card({image, title, description, cost, weight, pcs}) {
     return (
@@ -33,9 +33,7 @@ function Card({image, title, description, cost, weight, pcs}) {
                     </span>
                 </div>
 
-                <div className={styles['img-wrapper']}>
-                    <img src={imageBuy} alt=""/>
-                </div>
+                <ButtonBuy />
             </div>
         </div>
     )
