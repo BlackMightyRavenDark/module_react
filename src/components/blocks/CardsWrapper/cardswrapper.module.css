@@ -5,6 +5,6 @@
     column-gap: 20px;
     row-gap: 35px;
     margin: 0px 70px;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 200px);
     overflow: auto;
 }
