@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/module_react/static/css/main.d56634b4.css",
-    "main.js": "/module_react/static/js/main.682bbf67.js",
+    "main.css": "/module_react/static/css/main.2fc70cd2.css",
+    "main.js": "/module_react/static/js/main.b69518a0.js",
     "static/media/card1.png": "/module_react/static/media/card1.2363fec18ac2399bbc0b.png",
-    "static/media/card4.png": "/module_react/static/media/card4.2363fec18ac2399bbc0b.png",
     "static/media/card2.png": "/module_react/static/media/card2.c9b083eca12cf999b4b8.png",
     "static/media/card3.png": "/module_react/static/media/card3.b8d2473714cc46e5d2bb.png",
-    "static/media/header_cart.svg": "/module_react/static/media/header_cart.72e035aa7c2acbb899c9f23e2b1122b4.svg",
+    "static/media/crossOrange.svg": "/module_react/static/media/crossOrange.3bbd078d84d237a5f47e90968db641d2.svg",
+    "static/media/back.svg": "/module_react/static/media/back.84a26d1e92e48e534d2c.svg",
     "index.html": "/module_react/index.html",
-    "static/media/buy.svg": "/module_react/static/media/buy.f113ce090add70563b2999d82b28cf9a.svg",
-    "static/media/buyHovered.svg": "/module_react/static/media/buyHovered.ac7a21c64985e82186c538423e424e4b.svg",
-    "main.d56634b4.css.map": "/module_react/static/css/main.d56634b4.css.map",
-    "main.682bbf67.js.map": "/module_react/static/js/main.682bbf67.js.map"
+    "static/media/line.svg": "/module_react/static/media/line.ef64f783abd9529cb03880878dab8887.svg",
+    "main.2fc70cd2.css.map": "/module_react/static/css/main.2fc70cd2.css.map",
+    "main.b69518a0.js.map": "/module_react/static/js/main.b69518a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.d56634b4.css",
-    "static/js/main.682bbf67.js"
+    "static/css/main.2fc70cd2.css",
+    "static/js/main.b69518a0.js"
   ]
 }
