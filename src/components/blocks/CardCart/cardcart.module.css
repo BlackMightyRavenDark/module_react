@@ -1,0 +1,36 @@
+.card {
+    display: flex;
+    align-items: center;
+    gap: 260px;
+}
+
+.preview-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.preview-wrapper__image {
+    width: 122px;
+    height: 122px;
+}
+
+.preview-wrapper > p {
+    width: 310px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.cost-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cost-wrapper:hover {
+    cursor: pointer;
+}
+
+.cost-wrapper:hover > span {
+    color: orange;
+}
