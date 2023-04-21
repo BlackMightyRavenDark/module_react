@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import image from '../../../assets/header_cart.svg';
 
@@ -11,19 +12,21 @@ function Header() {
                 НАША ПРОДУКЦИЯ
             </span>
 
-            <span className={styles["header__cart-wrapper"]}>
-                <div className={styles["cart__text-wrapper"]}>
-                    <p>
-                        3 товара
-                    </p>
+            <Link to="/cart">
+                <span className={styles["header__cart-wrapper"]}>
+                    <div className={styles["cart__text-wrapper"]}>
+                        <p>
+                            3 товара
+                        </p>
 
-                    <p>
-                        на сумму 3 500 ₽
-                    </p>
-                </div>
+                        <p>
+                            на сумму 3 500 ₽
+                        </p>
+                    </div>
 
-                <img src={image} alt="" className="img"/>
-            </span>
+                    <img src={image} alt="" className="img"/>
+                </span>
+            </Link>
         </header>
     )
 }
