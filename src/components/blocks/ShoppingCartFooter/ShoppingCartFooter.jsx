@@ -4,7 +4,7 @@ import imageLine from "./../../../assets/line.svg";
 
 import styles from "./shoppingcartfooter.module.css";
 
-function ShoppingCartFooter() {
+function ShoppingCartFooter(totalPrice) {
     return (
         <div className={styles["footer"]}>
             <img src={imageLine} alt="" />
@@ -16,7 +16,7 @@ function ShoppingCartFooter() {
                     </p>
 
                     <p>
-                        6220 ₽
+                        {totalPrice} ₽
                     </p>
                 </div>
 

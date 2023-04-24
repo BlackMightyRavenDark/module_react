@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./card.module.css"
 
 import ButtonBuy from "../../Elements/ButtonBuy/ButtonBuy.jsx";
 
-function Card({image, title, description, cost, weight, pcs}) {
+function Card({id, image, title, description, cost, weight, pcs}) {
+    useEffect(() => {
+        console.log("oooo")
+    }, []);
+    function getBuyedSet() {
+        const shoppingCartString = localStorage.getItem("shoppingCart");
+        if (shoppingCartString === null || shoppingCartString === undefined || shoppingCartString === "") {
+            return new Set();
+        }
+
+        const array = shoppingCartString.split(",");
+        return array ? new Set(array) : new Set();
+    }
+
+    function isBuyed() {
+        const set = getBuyedSet();
+        return set.has(id.toString());
+    }
+
+    function buy() {
+        const shoppingCart = getBuyedSet();
+        console.log(shoppingCart);
+        const idString = id.toString();
+        if (!shoppingCart.has(idString)) {
+            shoppingCart.add(idString);
+        } else {
+            shoppingCart.delete(idString);
+        }
+        localStorage.setItem("shoppingCart", Array.from(shoppingCart));
+    }
+
     return (
         <div className={styles["card"]}>
             <div className={styles["card__content-wrapper"]}>
@@ -33,7 +63,10 @@ function Card({image, title, description, cost, weight, pcs}) {
                     </span>
                 </div>
 
-                <ButtonBuy />
+                <ButtonBuy
+                    onClickHandler={buy}
+                    isBuyedCallback={() => isBuyed()}
+                />
             </div>
         </div>
     )

@@ -13,6 +13,7 @@ function CardsWrapper() {
                     return (
                         <Card
                             key={element.id}
+                            id={element.id}
                             image={element.imageUrl}
                             title={element.title}
                             description={element.description}
@@ -21,7 +22,7 @@ function CardsWrapper() {
                             pcs={element.pieces}
                         />
                     )
-                })};
+                })}
         </div>
     )
 }
