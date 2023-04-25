@@ -1,19 +1,24 @@
 {
   "files": {
-    "main.css": "/module_react/static/css/main.662cbd9a.css",
-    "main.js": "/module_react/static/js/main.b69518a0.js",
+    "main.css": "/module_react/static/css/main.7bf74eba.css",
+    "main.js": "/module_react/static/js/main.9c5113a0.js",
     "static/media/card1.png": "/module_react/static/media/card1.2363fec18ac2399bbc0b.png",
+    "static/media/card4.png": "/module_react/static/media/card4.2363fec18ac2399bbc0b.png",
     "static/media/card2.png": "/module_react/static/media/card2.c9b083eca12cf999b4b8.png",
     "static/media/card3.png": "/module_react/static/media/card3.b8d2473714cc46e5d2bb.png",
+    "static/media/header_cart.svg": "/module_react/static/media/header_cart.1363fe210c482a130cdc77bd25f80046.svg",
     "static/media/crossOrange.svg": "/module_react/static/media/crossOrange.3bbd078d84d237a5f47e90968db641d2.svg",
-    "static/media/back.svg": "/module_react/static/media/back.84a26d1e92e48e534d2c.svg",
+    "static/media/back.svg": "/module_react/static/media/back.84a26d1e92e48e534d2c12f85091cc94.svg",
+    "static/media/backWhite.svg": "/module_react/static/media/backWhite.6a37b3a9d7a7f64dd03160f74e035e6a.svg",
     "index.html": "/module_react/index.html",
+    "static/media/buy.svg": "/module_react/static/media/buy.9e6d59172fff2efae43104783664e782.svg",
+    "static/media/buyHovered.svg": "/module_react/static/media/buyHovered.973915abc563bf61185eed98f92df55e.svg",
     "static/media/line.svg": "/module_react/static/media/line.ef64f783abd9529cb03880878dab8887.svg",
-    "main.662cbd9a.css.map": "/module_react/static/css/main.662cbd9a.css.map",
-    "main.b69518a0.js.map": "/module_react/static/js/main.b69518a0.js.map"
+    "main.7bf74eba.css.map": "/module_react/static/css/main.7bf74eba.css.map",
+    "main.9c5113a0.js.map": "/module_react/static/js/main.9c5113a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.662cbd9a.css",
-    "static/js/main.b69518a0.js"
+    "static/css/main.7bf74eba.css",
+    "static/js/main.9c5113a0.js"
   ]
 }
