@@ -7,17 +7,12 @@ import productList from "../../../products";
 
 import styles from "./header.module.css";
 
-function Header() {
-    function getBuyedIds() {
-        const shoppingCartString = localStorage.getItem("shoppingCart");
-        if (shoppingCartString === null || shoppingCartString === undefined || shoppingCartString === "") {
+function Header({cartItems}) {
+    function getPrice(cartArray) {
+        if (!cartArray || cartArray.length === 0) {
             return 0;
         }
-        const array = shoppingCartString.split(",");
-        return array ? array : null;
-    }
 
-    function getPrice(cartArray) {
         let price = 0;
         cartArray.forEach(element => {
             for (let i = 0; i < productList.length; ++i) {
@@ -31,9 +26,6 @@ function Header() {
         return price;
     }
 
-    const buyedIds = getBuyedIds();
-    const totalPrice = buyedIds ? getPrice(buyedIds) : 0;
-
     return (
         <header className={styles["header"]}>
             <span className={styles["header__our-prod"]}>
@@ -44,11 +36,11 @@ function Header() {
                 <span className={styles["header__cart-wrapper"]}>
                     <div className={styles["cart__text-wrapper"]}>
                         <p>
-                            {buyedIds ? buyedIds.length.toString() : "0"} товара
+                            {cartItems.length.toString()} товара
                         </p>
 
                         <p>
-                            на сумму {totalPrice} ₽
+                            на сумму {getPrice(cartItems)} ₽
                         </p>
                     </div>
 

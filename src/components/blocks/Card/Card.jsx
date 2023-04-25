@@ -3,10 +3,7 @@ import styles from "./card.module.css"
 
 import ButtonBuy from "../../Elements/ButtonBuy/ButtonBuy.jsx";
 
-function Card({id, image, title, description, cost, weight, pcs}) {
-    useEffect(() => {
-        console.log("oooo")
-    }, []);
+function Card({id, image, title, description, cost, weight, pcs, onBuyHandler}) {
     function getBuyedSet() {
         const shoppingCartString = localStorage.getItem("shoppingCart");
         if (shoppingCartString === null || shoppingCartString === undefined || shoppingCartString === "") {
@@ -24,7 +21,6 @@ function Card({id, image, title, description, cost, weight, pcs}) {
 
     function buy() {
         const shoppingCart = getBuyedSet();
-        console.log(shoppingCart);
         const idString = id.toString();
         if (!shoppingCart.has(idString)) {
             shoppingCart.add(idString);
@@ -32,6 +28,7 @@ function Card({id, image, title, description, cost, weight, pcs}) {
             shoppingCart.delete(idString);
         }
         localStorage.setItem("shoppingCart", Array.from(shoppingCart));
+        onBuyHandler();
     }
 
     return (

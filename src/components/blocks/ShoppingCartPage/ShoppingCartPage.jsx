@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-import CardCart from "./../CardCart/CardCart";
+import ShoppingCartHeader from '../ShoppingCartHeader/ShoppingCartHeader';
+import ShoppingCartFooter from '../ShoppingCartFooter/ShoppingCartFooter';
+import CardCart from "../CardCart/CardCart";
 
-import productList from "../../../products.js";
+import productList from "../../../products";
 
-import styles from "./shoppinglist.module.css";
+import styles from "./shoppingcartpage.module.css"
 
-function ShoppingList() {
+function ShoppingCartPage() {
     const [buyedIds, setBuyedIds] = useState([]);
 
     useEffect(() => {
@@ -23,22 +25,29 @@ function ShoppingList() {
         const idList = getBuyedIdsFromLocalStorage();
         const itemIdString = itemId.toString();
         const id = idList.indexOf(itemIdString);
+        console.log(id, idList);
         if (id >= 0) {
             idList.splice(id, 1);
         }
         setBuyedIds(idList);
+        localStorage.setItem("shoppingCart", idList.join(","));
     }
 
     function getTotalPrice() {
-        const a = productList.reduce((price, item) => {
-            return price += item.cost;
+        if (!buyedIds || buyedIds.length === 0) {
+            return 0;
+        }
+
+        return productList.reduce((price, item) => {
+            return (buyedIds.indexOf(item.id.toString()) >= 0) ? price += item.cost : price;
         }, 0);
-        console.log("a", a);
-        return a;
     }
 
     return (
-        <div className={styles["card-list"]}>
+        <>
+            <ShoppingCartHeader />
+
+            <div className={styles["card-list"]}>
             {
                 productList.map(element => {
                     if (buyedIds.indexOf(element.id.toString()) >= 0) {
@@ -56,7 +65,10 @@ function ShoppingList() {
                 )
             }
         </div>
+
+            <ShoppingCartFooter totalPrice={getTotalPrice()} />
+        </>
     )
 }
 
-export default ShoppingList;
+export default ShoppingCartPage;

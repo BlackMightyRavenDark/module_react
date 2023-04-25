@@ -5,7 +5,7 @@ import styles from './cardswrapper.module.css';
 import productList from "../../../products";
 import Card from '../Card/Card';
 
-function CardsWrapper() {
+function CardsWrapper({onBuyHandler}) {
     return (
         <div className={styles["card-list"]}>
             {
@@ -20,6 +20,7 @@ function CardsWrapper() {
                             cost={element.cost}
                             weight={element.weight ? element.weight : element.pieces}
                             pcs={element.pieces}
+                            onBuyHandler={onBuyHandler}
                         />
                     )
                 })}

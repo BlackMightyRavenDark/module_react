@@ -2,11 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Header from './components/blocks/Header/Header';
-import CardsWrapper from './components/blocks/CardsWrapper/CardsWrapper';
-import ShoppingCartHeader from './components/blocks/ShoppingCartHeader/ShoppingCartHeader';
-import ShoppingList from './components/blocks/ShoppingList/ShoppingList';
-import ShoppingCartFooter from './components/blocks/ShoppingCartFooter/ShoppingCartFooter';
+import MainPage from './components/blocks/MainPage/MainPage';
+import ShoppingCartPage from './components/blocks/ShoppingCartPage/ShoppingCartPage';
 
 import './main.css';
 
@@ -17,16 +14,13 @@ root.render(
       <Routes>
         <Route path="/" element={
           <>
-            <Header />
-            <CardsWrapper />
+            <MainPage />
           </>
         } />
 
         <Route path="/cart" element={
           <>
-            <ShoppingCartHeader />
-            <ShoppingList />
-            <ShoppingCartFooter />
+            <ShoppingCartPage />
           </>
         } />
       </Routes>

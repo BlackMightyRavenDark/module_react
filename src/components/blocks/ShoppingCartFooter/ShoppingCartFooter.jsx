@@ -4,7 +4,7 @@ import imageLine from "./../../../assets/line.svg";
 
 import styles from "./shoppingcartfooter.module.css";
 
-function ShoppingCartFooter(totalPrice) {
+function ShoppingCartFooter({totalPrice}) {
     return (
         <div className={styles["footer"]}>
             <img src={imageLine} alt="" />
