@@ -12,13 +12,13 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={
+        <Route path="/module_react" element={
           <>
             <MainPage />
           </>
         } />
 
-        <Route path="/cart" element={
+        <Route path="/module_react/cart" element={
           <>
             <ShoppingCartPage />
           </>

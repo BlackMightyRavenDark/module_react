@@ -31,7 +31,7 @@ function Header({cartItems}) {
                 НАША ПРОДУКЦИЯ
             </span>
 
-            <Link to="/cart">
+            <Link to="/module_react/cart">
                 <span className={styles["header__cart-wrapper"]}>
                     <div className={styles["cart__text-wrapper"]}>
                         <p>
