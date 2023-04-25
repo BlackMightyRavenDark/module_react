@@ -16,8 +16,12 @@ function ShoppingCartPage() {
     }, []);
 
     function getBuyedIdsFromLocalStorage() {
-        const shoppingCart = localStorage.getItem("shoppingCart");
-        const array = shoppingCart.split(",");
+        const shoppingCartString = localStorage.getItem("shoppingCart");
+        if (shoppingCartString === null || shoppingCartString === undefined || shoppingCartString === "") {
+            return [];
+        }
+
+        const array = shoppingCartString.split(",");
         return array ? array : [];
     }
 
@@ -48,23 +52,24 @@ function ShoppingCartPage() {
             <ShoppingCartHeader />
 
             <div className={styles["card-list"]}>
-            {
-                productList.map(element => {
-                    if (buyedIds.indexOf(element.id.toString()) >= 0) {
-                        return (
-                            <CardCart
-                                key={element.id}
-                                id={element.id}
-                                imageUrl={element.imageUrl}
-                                title={element.title}
-                                cost={element.cost}
-                                onRemoveHandler={onRemoveItemHandler}
-                            />
-                        )}
-                    }
-                )
-            }
-        </div>
+                {!buyedIds.length && <p>Корзина пуста</p>}
+                {
+                    productList.map(element => {
+                        if (buyedIds.indexOf(element.id.toString()) >= 0) {
+                            return (
+                                <CardCart
+                                    key={element.id}
+                                    id={element.id}
+                                    imageUrl={element.imageUrl}
+                                    title={element.title}
+                                    cost={element.cost}
+                                    onRemoveHandler={onRemoveItemHandler}
+                                />
+                            )}
+                        }
+                    )
+                }
+            </div>
 
             <ShoppingCartFooter totalPrice={getTotalPrice()} />
         </>
