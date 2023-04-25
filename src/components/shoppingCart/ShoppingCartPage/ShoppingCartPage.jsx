@@ -64,8 +64,9 @@ function ShoppingCartPage() {
                                     title={element.title}
                                     cost={element.cost}
                                     onRemoveHandler={onRemoveItemHandler}
-                                />
-                            )}
+                                />);
+                            }
+                            return null;
                         }
                     )
                 }
