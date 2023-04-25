@@ -1,29 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import image from '../../../assets/header_cart.svg';
+import image from "../../assets/header_cart.svg";
 
-import productList from "../../../products";
+import productList from "../../products";
 
 import styles from "./header.module.css";
 
 function Header({cartItems}) {
-    function getPrice(cartArray) {
+    function getTotalPrice(cartArray) {
         if (!cartArray || cartArray.length === 0) {
             return 0;
         }
 
-        let price = 0;
-        cartArray.forEach(element => {
+        return cartArray.reduce((price, elementId) => {
             for (let i = 0; i < productList.length; ++i) {
                 const idString = productList[i]["id"].toString();
-                if (idString === element) {
-                    price += productList[i]["cost"];
+                if (idString === elementId) {
+                    return price += productList[i]["cost"];
                 }
             }
-        });
 
-        return price;
+            return price;
+        }, 0);
     }
 
     return (
@@ -40,7 +39,7 @@ function Header({cartItems}) {
                         </p>
 
                         <p>
-                            на сумму {getPrice(cartItems)} ₽
+                            на сумму {getTotalPrice(cartItems)} ₽
                         </p>
                     </div>
 

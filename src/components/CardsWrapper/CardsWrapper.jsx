@@ -1,9 +1,10 @@
 import React from "react";
 
-import styles from './cardswrapper.module.css';
+import Card from "../Card/Card";
 
-import productList from "../../../products";
-import Card from '../Card/Card';
+import productList from "../../products";
+
+import styles from './cardswrapper.module.css';
 
 function CardsWrapper({onBuyHandler}) {
     return (

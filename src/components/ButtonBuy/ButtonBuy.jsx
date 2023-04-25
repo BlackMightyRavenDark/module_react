@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import imageBuy from "../../../assets/buy.svg";
-import imageBuyActive from "../../../assets/buyHovered.svg";
+import imageBuy from "../../assets/buy.svg";
+import imageBuyActive from "../../assets/buyHovered.svg";
 
 function ButtonBuy({onClickHandler, isBuyedCallback}) {
     const [isMouseOver, setIsMouseOver] = useState(false);

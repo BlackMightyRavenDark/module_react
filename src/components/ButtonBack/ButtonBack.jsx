@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import imageBack from "../../../assets/backWhite.svg";
-import imageBackActive from "../../../assets/back.svg";
+import imageBack from "../../assets/backWhite.svg";
+import imageBackActive from "../../assets/back.svg";
 
 function ButtonBack() {
     const [isMouseOver, setIsMouseOver] = useState(false);

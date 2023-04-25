@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
-import styles from "./card.module.css"
+import React from "react";
 
-import ButtonBuy from "../../Elements/ButtonBuy/ButtonBuy.jsx";
+import ButtonBuy from "../ButtonBuy/ButtonBuy.jsx";
+
+import styles from "./card.module.css"
 
 function Card({id, image, title, description, cost, weight, pcs, onBuyHandler}) {
     function getBuyedSet() {
