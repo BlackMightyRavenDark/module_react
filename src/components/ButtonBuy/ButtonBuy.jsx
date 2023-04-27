@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import imageBuy from "../../../assets/buy.svg";
-import imageBuyActive from "../../../assets/buyHovered.svg";
+import imageBuy from "../../assets/buy.svg";
+import imageBuyActive from "../../assets/buyHovered.svg";
 
-function ButtonBuy() {
+function ButtonBuy({onClickHandler, isBuyedCallback}) {
     const [isMouseOver, setIsMouseOver] = useState(false);
 
     function onMouseOverHandler() {
@@ -16,10 +16,11 @@ function ButtonBuy() {
 
     return (
         <img
-            src={isMouseOver ? imageBuyActive : imageBuy}
+            src={(isMouseOver || isBuyedCallback()) ? imageBuyActive : imageBuy}
             alt="buy"
             onMouseOver={onMouseOverHandler}
             onMouseOut={onMouseOutHandler}
+            onClick={onClickHandler}
         />
     )
 }

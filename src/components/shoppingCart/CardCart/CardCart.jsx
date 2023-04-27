@@ -4,7 +4,7 @@ import imageCross from "./../../../assets/crossOrange.svg";
 
 import styles from "./cardcart.module.css";
 
-function CardCart({imageUrl, title, cost}) {
+function CardCart({id, imageUrl, title, cost, onRemoveHandler}) {
     return (
         <div className={styles["card"]}>
             <div className={styles["preview-wrapper"]}>
@@ -20,7 +20,7 @@ function CardCart({imageUrl, title, cost}) {
                     {cost} ₽
                 </span>
 
-                <img src={imageCross} alt="X" />
+                <img src={imageCross} alt="X" onClick={() => onRemoveHandler(id)} />
             </div>
         </div>
     )

@@ -1,11 +1,12 @@
 import React from "react";
 
-import styles from './cardswrapper.module.css';
+import Card from "../ProductCard/ProductCard";
 
-import productList from "../../../products";
-import Card from '../Card/Card';
+import productList from "../../products";
 
-function CardsWrapper() {
+import styles from "./mainpagecardlist.module.css";
+
+function CardsWrapper({onBuyHandler}) {
     return (
         <div className={styles["card-list"]}>
             {
@@ -13,15 +14,17 @@ function CardsWrapper() {
                     return (
                         <Card
                             key={element.id}
+                            id={element.id}
                             image={element.imageUrl}
                             title={element.title}
                             description={element.description}
                             cost={element.cost}
                             weight={element.weight ? element.weight : element.pieces}
                             pcs={element.pieces}
+                            onBuyHandler={onBuyHandler}
                         />
                     )
-                })};
+                })}
         </div>
     )
 }
