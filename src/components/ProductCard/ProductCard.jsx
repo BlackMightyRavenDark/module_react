@@ -2,7 +2,7 @@ import React from "react";
 
 import ButtonBuy from "../ButtonBuy/ButtonBuy.jsx";
 
-import styles from "./card.module.css"
+import styles from "./productcard.module.css"
 
 function Card({id, image, title, description, cost, weight, pcs, onBuyHandler}) {
     function getBuyedSet() {

@@ -5,7 +5,7 @@ import image from "../../assets/header_cart.svg";
 
 import productList from "../../products";
 
-import styles from "./header.module.css";
+import styles from "./mainpageheader.module.css";
 
 function Header({cartItems}) {
     function getTotalPrice(cartArray) {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import ShoppingCartHeader from '../ShoppingCartHeader/ShoppingCartHeader';
-import ShoppingCartFooter from '../ShoppingCartFooter/ShoppingCartFooter';
-import CardCart from "../CardCart/CardCart";
+import ShoppingCartHeader from "../../shoppingCart/ShoppingCartHeader/ShoppingCartHeader";
+import ShoppingCartFooter from "../../shoppingCart/ShoppingCartFooter/ShoppingCartFooter";
+import CardCart from "../../shoppingCart/CardCart/CardCart"
 
 import productList from "../../../products";
 

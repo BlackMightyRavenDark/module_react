@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Header from '../Header/Header';
-import CardsWrapper from '../CardsWrapper/CardsWrapper';
+import Header from "../../MainPageHeader/MainPageHeader";
+import CardsWrapper from "../../MainPageCardList/MainPageCardList";
 
 function MainPage() {
     const [buyedIds, setBuyedIds] = useState([]);
