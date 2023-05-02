@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/module_react/static/css/main.3496bac2.css",
-    "main.js": "/module_react/static/js/main.33e0bddd.js",
+    "main.css": "/module_react/static/css/main.0ee244dd.css",
+    "main.js": "/module_react/static/js/main.3f6511fb.js",
     "static/media/card1.png": "/module_react/static/media/card1.2363fec18ac2399bbc0b.png",
     "static/media/card4.png": "/module_react/static/media/card4.2363fec18ac2399bbc0b.png",
     "static/media/card2.png": "/module_react/static/media/card2.c9b083eca12cf999b4b8.png",
     "static/media/card3.png": "/module_react/static/media/card3.b8d2473714cc46e5d2bb.png",
     "static/media/header_cart.svg": "/module_react/static/media/header_cart.1363fe210c482a130cdc77bd25f80046.svg",
-    "static/media/crossOrange.svg": "/module_react/static/media/crossOrange.3bbd078d84d237a5f47e90968db641d2.svg",
-    "static/media/back.svg": "/module_react/static/media/back.84a26d1e92e48e534d2c12f85091cc94.svg",
-    "static/media/backWhite.svg": "/module_react/static/media/backWhite.6a37b3a9d7a7f64dd03160f74e035e6a.svg",
+    "static/media/crossOrange.svg": "/module_react/static/media/crossOrange.e13ce0a322c684501cd61ede2ce82991.svg",
+    "static/media/back.svg": "/module_react/static/media/back.b44e2b62c3a7e948f38aad3f86ea8eff.svg",
+    "static/media/backWhite.svg": "/module_react/static/media/backWhite.0054faa04c5998ceea0a908b1aeb42c1.svg",
     "index.html": "/module_react/index.html",
     "static/media/buy.svg": "/module_react/static/media/buy.9e6d59172fff2efae43104783664e782.svg",
     "static/media/buyHovered.svg": "/module_react/static/media/buyHovered.973915abc563bf61185eed98f92df55e.svg",
-    "main.3496bac2.css.map": "/module_react/static/css/main.3496bac2.css.map",
-    "main.33e0bddd.js.map": "/module_react/static/js/main.33e0bddd.js.map"
+    "main.0ee244dd.css.map": "/module_react/static/css/main.0ee244dd.css.map",
+    "main.3f6511fb.js.map": "/module_react/static/js/main.3f6511fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.3496bac2.css",
-    "static/js/main.33e0bddd.js"
+    "static/css/main.0ee244dd.css",
+    "static/js/main.3f6511fb.js"
   ]
 }
