@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 
 import ShoppingCartHeader from "../../shoppingCart/ShoppingCartHeader/ShoppingCartHeader";
 import ShoppingCartFooter from "../../shoppingCart/ShoppingCartFooter/ShoppingCartFooter";
@@ -9,43 +10,7 @@ import productList from "../../../products";
 import styles from "./shoppingcartpage.module.css"
 
 function ShoppingCartPage() {
-    const [buyedIds, setBuyedIds] = useState([]);
-
-    useEffect(() => {
-        setBuyedIds(getBuyedIdsFromLocalStorage());
-    }, []);
-
-    function getBuyedIdsFromLocalStorage() {
-        const shoppingCartString = localStorage.getItem("shoppingCart");
-        if (shoppingCartString === null || shoppingCartString === undefined || shoppingCartString === "") {
-            return [];
-        }
-
-        const array = shoppingCartString.split(",");
-        return array ? array : [];
-    }
-
-    function onRemoveItemHandler(itemId) {
-        const idList = getBuyedIdsFromLocalStorage();
-        const itemIdString = itemId.toString();
-        const id = idList.indexOf(itemIdString);
-        console.log(id, idList);
-        if (id >= 0) {
-            idList.splice(id, 1);
-        }
-        setBuyedIds(idList);
-        localStorage.setItem("shoppingCart", idList.join(","));
-    }
-
-    function getTotalPrice() {
-        if (!buyedIds || buyedIds.length === 0) {
-            return 0;
-        }
-
-        return productList.reduce((price, item) => {
-            return (buyedIds.indexOf(item.id.toString()) >= 0) ? price += item.cost : price;
-        }, 0);
-    }
+    const buyedIds = useSelector(state => state.products.buyedIds);
 
     return (
         <>
@@ -63,8 +28,8 @@ function ShoppingCartPage() {
                                     imageUrl={element.imageUrl}
                                     title={element.title}
                                     cost={element.cost}
-                                    onRemoveHandler={onRemoveItemHandler}
-                                />);
+                                />
+                                );
                             }
                             return null;
                         }
@@ -72,7 +37,7 @@ function ShoppingCartPage() {
                 }
             </div>
 
-            <ShoppingCartFooter totalPrice={getTotalPrice()} />
+            <ShoppingCartFooter />
         </>
     )
 }
