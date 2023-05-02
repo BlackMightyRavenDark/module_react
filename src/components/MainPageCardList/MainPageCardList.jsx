@@ -6,7 +6,7 @@ import productList from "../../products";
 
 import styles from "./mainpagecardlist.module.css";
 
-function CardsWrapper({onBuyHandler}) {
+function MainPageCardList() {
     return (
         <div className={styles["card-list"]}>
             {
@@ -21,12 +21,12 @@ function CardsWrapper({onBuyHandler}) {
                             cost={element.cost}
                             weight={element.weight ? element.weight : element.pieces}
                             pcs={element.pieces}
-                            onBuyHandler={onBuyHandler}
                         />
                     )
-                })}
+                })
+            }
         </div>
     )
 }
 
-export default CardsWrapper;
+export default MainPageCardList;

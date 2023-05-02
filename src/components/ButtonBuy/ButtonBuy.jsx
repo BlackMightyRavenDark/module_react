@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import imageBuy from "../../assets/buy.svg";
 import imageBuyActive from "../../assets/buyHovered.svg";
 
-function ButtonBuy({onClickHandler, isBuyedCallback}) {
+function ButtonBuy({onClickHandler, isActive}) {
     const [isMouseOver, setIsMouseOver] = useState(false);
 
     function onMouseOverHandler() {
@@ -16,11 +16,11 @@ function ButtonBuy({onClickHandler, isBuyedCallback}) {
 
     return (
         <img
-            src={(isMouseOver || isBuyedCallback()) ? imageBuyActive : imageBuy}
+            src={isMouseOver || isActive ? imageBuyActive : imageBuy}
             alt="buy"
             onMouseOver={onMouseOverHandler}
             onMouseOut={onMouseOutHandler}
-            onClick={onClickHandler}
+            onClick={() => onClickHandler()}
         />
     )
 }

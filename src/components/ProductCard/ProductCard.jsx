@@ -1,35 +1,31 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { addToCart, removeFromCart } from "../../store/reducers/products";
 
 import ButtonBuy from "../ButtonBuy/ButtonBuy.jsx";
 
-import styles from "./productcard.module.css"
+import styles from "./productcard.module.css";
 
-function Card({id, image, title, description, cost, weight, pcs, onBuyHandler}) {
-    function getBuyedSet() {
-        const shoppingCartString = localStorage.getItem("shoppingCart");
-        if (shoppingCartString === null || shoppingCartString === undefined || shoppingCartString === "") {
-            return new Set();
+function Card({id, image, title, description, cost, weight, pcs}) {
+    const buyedIds = useSelector(state => state.products.buyedIds);
+    const dispatch = useDispatch();
+
+    function getIsBuyed() {
+        for (let i = 0; i < buyedIds.length; ++i) {
+            if (buyedIds[i] === id.toString()) {
+                return true;
+            }
         }
-
-        const array = shoppingCartString.split(",");
-        return array ? new Set(array) : new Set();
+        return false;
     }
 
-    function isBuyed() {
-        const set = getBuyedSet();
-        return set.has(id.toString());
-    }
-
-    function buy() {
-        const shoppingCart = getBuyedSet();
-        const idString = id.toString();
-        if (!shoppingCart.has(idString)) {
-            shoppingCart.add(idString);
+    function toggleBuy() {
+        if (getIsBuyed()) {
+            dispatch(removeFromCart({id}));
         } else {
-            shoppingCart.delete(idString);
+            dispatch(addToCart({id}));
         }
-        localStorage.setItem("shoppingCart", Array.from(shoppingCart));
-        onBuyHandler();
     }
 
     return (
@@ -62,8 +58,8 @@ function Card({id, image, title, description, cost, weight, pcs, onBuyHandler}) 
                 </div>
 
                 <ButtonBuy
-                    onClickHandler={buy}
-                    isBuyedCallback={() => isBuyed()}
+                    onClickHandler={toggleBuy}
+                    isActive={getIsBuyed()}
                 />
             </div>
         </div>
