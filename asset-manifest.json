@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/module_react/static/css/main.0ee244dd.css",
-    "main.js": "/module_react/static/js/main.3f6511fb.js",
+    "main.css": "/module_react/static/css/main.bf62993e.css",
+    "main.js": "/module_react/static/js/main.1c5c57b6.js",
     "static/media/card1.png": "/module_react/static/media/card1.2363fec18ac2399bbc0b.png",
     "static/media/card4.png": "/module_react/static/media/card4.2363fec18ac2399bbc0b.png",
     "static/media/card2.png": "/module_react/static/media/card2.c9b083eca12cf999b4b8.png",
@@ -13,11 +13,11 @@
     "index.html": "/module_react/index.html",
     "static/media/buy.svg": "/module_react/static/media/buy.9e6d59172fff2efae43104783664e782.svg",
     "static/media/buyHovered.svg": "/module_react/static/media/buyHovered.973915abc563bf61185eed98f92df55e.svg",
-    "main.0ee244dd.css.map": "/module_react/static/css/main.0ee244dd.css.map",
-    "main.3f6511fb.js.map": "/module_react/static/js/main.3f6511fb.js.map"
+    "main.bf62993e.css.map": "/module_react/static/css/main.bf62993e.css.map",
+    "main.1c5c57b6.js.map": "/module_react/static/js/main.1c5c57b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ee244dd.css",
-    "static/js/main.3f6511fb.js"
+    "static/css/main.bf62993e.css",
+    "static/js/main.1c5c57b6.js"
   ]
 }
